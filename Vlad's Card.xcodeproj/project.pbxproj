@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F570713824782BD7003CC2BE /* MyBioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F570713724782BD7003CC2BE /* MyBioView.swift */; };
 		F5E848122477E6C60069C170 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E848112477E6C60069C170 /* AppDelegate.swift */; };
 		F5E848142477E6C60069C170 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E848132477E6C60069C170 /* SceneDelegate.swift */; };
 		F5E848162477E6C60069C170 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E848152477E6C60069C170 /* ContentView.swift */; };
 		F5E848182477E6CB0069C170 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5E848172477E6CB0069C170 /* Assets.xcassets */; };
 		F5E8481B2477E6CB0069C170 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5E8481A2477E6CB0069C170 /* Preview Assets.xcassets */; };
 		F5E8481E2477E6CB0069C170 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5E8481C2477E6CB0069C170 /* LaunchScreen.storyboard */; };
+		F5E84827247814400069C170 /* PFHighwaySansPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5E84826247814400069C170 /* PFHighwaySansPro-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F570713724782BD7003CC2BE /* MyBioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBioView.swift; sourceTree = "<group>"; };
 		F5E8480E2477E6C60069C170 /* Vlad's Card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vlad's Card.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5E848112477E6C60069C170 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5E848132477E6C60069C170 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		F5E8481A2477E6CB0069C170 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F5E8481D2477E6CB0069C170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5E8481F2477E6CB0069C170 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5E84826247814400069C170 /* PFHighwaySansPro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PFHighwaySansPro-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,11 @@
 		F5E848102477E6C60069C170 /* Vlad's Card */ = {
 			isa = PBXGroup;
 			children = (
+				F5E848252478142E0069C170 /* Fonts */,
 				F5E848112477E6C60069C170 /* AppDelegate.swift */,
 				F5E848132477E6C60069C170 /* SceneDelegate.swift */,
 				F5E848152477E6C60069C170 /* ContentView.swift */,
+				F570713724782BD7003CC2BE /* MyBioView.swift */,
 				F5E848172477E6CB0069C170 /* Assets.xcassets */,
 				F5E8481C2477E6CB0069C170 /* LaunchScreen.storyboard */,
 				F5E8481F2477E6CB0069C170 /* Info.plist */,
@@ -73,6 +79,14 @@
 				F5E8481A2477E6CB0069C170 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F5E848252478142E0069C170 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F5E84826247814400069C170 /* PFHighwaySansPro-Light.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5E84827247814400069C170 /* PFHighwaySansPro-Light.ttf in Resources */,
 				F5E8481E2477E6CB0069C170 /* LaunchScreen.storyboard in Resources */,
 				F5E8481B2477E6CB0069C170 /* Preview Assets.xcassets in Resources */,
 				F5E848182477E6CB0069C170 /* Assets.xcassets in Resources */,
@@ -147,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5E848122477E6C60069C170 /* AppDelegate.swift in Sources */,
+				F570713824782BD7003CC2BE /* MyBioView.swift in Sources */,
 				F5E848142477E6C60069C170 /* SceneDelegate.swift in Sources */,
 				F5E848162477E6C60069C170 /* ContentView.swift in Sources */,
 			);
