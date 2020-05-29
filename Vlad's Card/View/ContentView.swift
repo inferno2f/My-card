@@ -7,13 +7,21 @@
 //
 
 import SwiftUI
+import MessageUI
 
 struct ContentView: View {
+
+    /// The delegate required by `MFMailComposeViewController`
+    private let mailComposeDelegate = MailDelegate()
+    
     var body: some View {
+        
         ZStack{
             Color(.systemBlue)
                 .edgesIgnoringSafeArea(.all)
             VStack{
+                
+                //Profile photo and occupation
                 Image("vlad")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -30,8 +38,9 @@ struct ContentView: View {
                     .font(.system(size: 20))
                 Divider()
                     .hidden()
+                
+                //Call Button
                 Button (action: {
-                    
                     let cleanString = "79217713659"
                     
                     let formattedString = "tel://\(cleanString)"
@@ -45,12 +54,14 @@ struct ContentView: View {
                 
                 Divider()
                     .hidden()
+                
+                //Email button
                 Button (action: {
-                    
+                    self.presentMailCompose()
                 }) {
                     MyBioView(text: "nikitinv91@gmail.com", imageName: "envelope.fill")
                 }
-                
+     
             }
         }
     }
@@ -62,5 +73,36 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
+
+//MARK: The mail part
+extension ContentView {
+
+    //Delegate for view controller as `MFMailComposeViewControllerDelegate`
+    private class MailDelegate: NSObject, MFMailComposeViewControllerDelegate {
+
+        func mailComposeController(_ controller: MFMailComposeViewController,
+                                   didFinishWith result: MFMailComposeResult,
+                                   error: Error?) {
+             print("Failed to send an email")
+            controller.dismiss(animated: true)
+        }
+
+    }
+
+    // Present an mail compose view controller modally in UIKit environment
+    private func presentMailCompose() {
+        guard MFMailComposeViewController.canSendMail() else {
+            return
+        }
+        let vc = UIApplication.shared.keyWindow?.rootViewController
+
+        let composeVC = MFMailComposeViewController()
+        composeVC.mailComposeDelegate = mailComposeDelegate
+
+        composeVC.setToRecipients(["nikitinv91@gmail.com"])
+
+        vc?.present(composeVC, animated: true)
+    }
+}
 
 
