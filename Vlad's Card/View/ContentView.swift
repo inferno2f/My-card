@@ -30,13 +30,28 @@ struct ContentView: View {
                     .font(.system(size: 20))
                 Divider()
                     .hidden()
-                MyBioView(text: "+7 (921) 771-36-59", imageName: "phone.fill")
+                Button (action: {
+                    
+                    let cleanString = "79217713659"
+                    
+                    let formattedString = "tel://\(cleanString)"
+                    let url: NSURL = URL(string: formattedString)! as NSURL
+                    
+                    UIApplication.shared.open(url as URL)
+                    
+                }) {
+                    MyBioView(text: "+7 (921) 771-36-59", imageName: "phone.fill")
+                }
+                
                 Divider()
                     .hidden()
-                MyBioView(text: "nikitinv91@gmail.com", imageName: "envelope.fill")
+                Button (action: {
+                    
+                }) {
+                    MyBioView(text: "nikitinv91@gmail.com", imageName: "envelope.fill")
+                }
+                
             }
-            
-            
         }
     }
 }
@@ -46,5 +61,6 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
 
 
