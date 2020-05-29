@@ -10,8 +10,8 @@ import SwiftUI
 import MessageUI
 
 struct ContentView: View {
-
-    /// The delegate required by `MFMailComposeViewController`
+    
+    
     private let mailComposeDelegate = MailDelegate()
     
     var body: some View {
