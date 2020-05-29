@@ -14,7 +14,6 @@ struct MyBioView: View {
     let imageName: String
     
     var body: some View {
- 
         RoundedRectangle(cornerRadius: 15)
             .shadow(radius: 5)
             .foregroundColor(.white)
